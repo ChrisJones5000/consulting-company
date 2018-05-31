@@ -1,3 +1,4 @@
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -284,51 +285,44 @@ body {
 h1 {
 	font-size: 2rem;
 }
-h1 span.icon {
-		fill: red;
-	}
+/* Do Not Edit modules/_sprite directly as it is auto-generated via Gulp
+	Instead edit gulp/templates/sprite
+ */
 .icon {
-	display: inline-block;
-}
+			background-image: url('/assets/images/sprites/sprite-27267142.svg');
+		}
 .icon--adjust {
 		width: 20px;
 		height: 20px;
-		background-image: url('/temp/sprite/css/svg/sprite.css-27267142.svg');
 		background-position: 0 0;
 	}
 .icon--aircraft {
 		width: 20px;
 		height: 20px;
-		background-image: url('/temp/sprite/css/svg/sprite.css-27267142.svg');
 		background-position: 50% 0;
 	}
 .icon--archive {
 		width: 20px;
 		height: 20px;
-		background-image: url('/temp/sprite/css/svg/sprite.css-27267142.svg');
 		background-position: 0 50%;
 	}
 .icon--game-controller {
 		width: 20px;
 		height: 20px;
-		background-image: url('/temp/sprite/css/svg/sprite.css-27267142.svg');
 		background-position: 50% 50%;
 	}
 .icon--gauge {
 		width: 20px;
 		height: 20px;
-		background-image: url('/temp/sprite/css/svg/sprite.css-27267142.svg');
 		background-position: 100% 0;
 	}
 .icon--graduation-cap {
 		width: 20px;
 		height: 20px;
-		background-image: url('/temp/sprite/css/svg/sprite.css-27267142.svg');
 		background-position: 100% 50%;
 	}
 .icon--upload-to-cloud {
 		width: 20px;
 		height: 20px;
-		background-image: url('/temp/sprite/css/svg/sprite.css-27267142.svg');
 		background-position: 0 100%;
 	}
