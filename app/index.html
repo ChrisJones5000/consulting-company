@@ -2,16 +2,51 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Add Google Fonts Here
-    <link href='' rel='stylesheet' type='text/css'>
-    -->
     <title>My Title</title>
     <meta name="keywords" content="Consulting company in Austin, TX">
     <meta name="description" content="This is a dummy template for consulting companies in Austin, TX.">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800|Merriweather:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="temp/styles/styles.css">
 </head>
 <body>
-	<h1>Testing</h1>
+    <header class="site-header">
+        <div class="site-header__menu-container">
+            <nav class="site-header__menu">
+                <ul class="site-header__menu-list">
+                    <li class="site-header__menu-item site-header__menu-item--active"><a class="site-header__menu-link" href="#">About Us</a></li>
+                    <li class="site-header__menu-item"><a class="site-header__menu-link" href="#">Solutions</a></li>
+                    <li class="site-header__menu-item"><a class="site-header__menu-link" href="#">Services</a></li>
+                    <li class="site-header__menu-item"><a class="site-header__menu-link" href="#">Projects</a></li>
+                    <li class="site-header__menu-item"><a class="site-header__menu-link" href="#">Clients</a></li>
+                </ul>
+            </nav>
+            <i class="fas fa-search site-header__search-icon"></i>
+        </div>
+        <div class="site-header__info-bar">
+            <h1 class="site-header__logo">Consulting Co.</h1>
+            <div class="site-header__info-container">
+                <div class="site-header__info-phone">
+                    <i class="fas fa-phone site-header__info-icon"></i>
+                    <div class="site-header__info-text">
+                        <p>Phone:</p>
+                        <p>555-555-5555</p>
+                    </div>
+                </div>
+                <div class="site-header__info-location">
+                    Location
+                </div>
+            </div>
+        </div>        
+    </header>
+    <section class="large-hero">
+        <img src="assets/images/page-1_slide02.jpg" alt="Photo of man with glasses" class="large-hero__img">
+        <div class="container">
+            <div class="large-hero__text">
+                <h2 class="large-hero__text--headline">Raise <span>efficiency</span>, cut <span>downtime</span>, and keep your <span>projects</span> on time!</h2>
+            </div>
+        </div>
+    </section>
 	<script src="/temp/scripts/App.js"></script>
 </body>
 </html>

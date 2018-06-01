@@ -12,8 +12,15 @@ html {
 
 body {
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	color: $color-dark;
 }
 
-h1 {
-	font-size: 2rem;
+h1, h2, h3, h4, h5, h6, p {
+	font-size: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
