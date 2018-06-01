@@ -401,15 +401,22 @@ img {
 		align-items: center;
 	}
 .site-header__info-location {
-
+		display: flex;
+		align-items: center;
 	}
 .site-header__info-icon {
 		font-size: 2.5rem;
 		margin-right: .5rem;
 	}
+.site-header__info-icon--large {
+			font-size: 3rem;
+		}
 .site-header__info-text {
-
+		line-height: 1.3em;		
 	}
+.site-header__info-text address {
+			font-style: normal;
+		}
 .large-hero {
 	position: relative;
 }

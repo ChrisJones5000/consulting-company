@@ -75,15 +75,24 @@
 	}
 
 	&__info-location {
-
+		display: flex;
+		align-items: center;
 	}
 
 	&__info-icon {
 		font-size: 2.5rem;
 		margin-right: .5rem;
+
+		&--large {
+			font-size: 3rem;
+		}
 	}
 
 	&__info-text {
+		line-height: 1.3em;
 
+		address {
+			font-style: normal;
+		}		
 	}
 }
