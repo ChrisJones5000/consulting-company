@@ -286,6 +286,10 @@ body {
 h1, h2, h3, h4, h5, h6, p {
 	font-size: 100%;
 }
+p {
+	font-size: 1.4rem;
+	line-height: 1.3em;
+}
 img {
 	max-width: 100%;
 	height: auto;
@@ -339,6 +343,31 @@ img {
 .section {
 	padding: 6rem 0;
 }
+.btn {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	text-decoration: none;
+	border-radius: 2rem;
+	transition: all .2s;
+}
+.btn--dark-grey {
+		background-color: #626265;
+		color: #FFF;
+	}
+.btn--dark-grey:hover {
+			background-color: #DCA63B;
+		}
+.btn--orange {
+		background-color: #DCA63B;
+		color: #FFF;
+	}
+.btn--orange:hover {
+			background-color: #626265;
+		}
+.btn--large {
+		padding: 1.5rem 5rem;
+	}
 .site-header {
 	background-color: #404040;
 }
@@ -514,11 +543,22 @@ img {
 
 }
 .welcome__top {
+		padding-bottom: 6rem;
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 	}
+.welcome__top::after {
+			content: '';
+			height: 2px;
+			width: 100%;
+			background: url('../../assets/images/bg_hr.png') repeat-x;
+			position: absolute;
+			bottom: 0;
+		}
 .welcome__text-content {
 		width: 55%;
+		font-size: 1.4rem;
 	}
 .welcome__text-content__title {
 			font-size: 3.5rem;
@@ -532,9 +572,17 @@ img {
 		}
 .welcome__buttons {
 		width: 35%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
+.welcome__buttons .btn {
+			min-width: 45%;
+			text-align: center;
+			margin-top: 4rem;
+		}
 .welcome__bottom {
-
+		padding-top: 6rem;
 	}
 .welcome__blurb__image {
 
