@@ -21,13 +21,17 @@
 
 	&__menu-item {
 		display: inline-block;
+		border-radius: 3rem;
+		transition: background-color .15s ease-in-out, color .25s ease-in-out;
 
-		&--active {
+		&--active,
+		&:hover {
 			background-color: $color-dark;
-			border-radius: 3rem;
+			
 		}
 
-		&--active a {
+		&--active a,
+		&:hover a {
 			color: $color-text-dark;
 		}
 	}
@@ -46,7 +50,7 @@
 	}
 
 	&__info-bar {
-		padding: 4rem 3.5rem;
+		padding: 3.5rem 3.5rem;
 		display: flex;
 		justify-content: space-between;
 	}

@@ -1,0 +1,49 @@
+.welcome {
+	background-color: $color-beige;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__text-content {
+		width: 55%;
+
+		&__title {
+			@mixin section-title;
+		}
+
+		&__text {
+
+		}
+	}
+
+	&__buttons {
+		width: 35%;
+	}
+
+	&__bottom {
+
+	}
+
+	&__blurb {
+		
+		&__image {
+
+		}
+
+		&__title {
+
+		}
+
+		&__text {
+
+		}
+
+		&__link {
+
+		}
+	}
+
+
+}

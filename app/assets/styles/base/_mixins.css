@@ -4,3 +4,11 @@
 		@mixin-content;
 	}
 }
+
+@define-mixin section-title {
+	font-size: 3.5rem;
+	color: $color-darkest;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+}
