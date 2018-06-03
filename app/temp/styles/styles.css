@@ -286,10 +286,6 @@ body {
 h1, h2, h3, h4, h5, h6, p {
 	font-size: 100%;
 }
-p {
-	font-size: 1.4rem;
-	line-height: 1.3em;
-}
 img {
 	max-width: 100%;
 	height: auto;
@@ -568,7 +564,7 @@ img {
 			margin-bottom: 3rem;
 		}
 .welcome__text-content__text {
-
+			line-height: 1.3;
 		}
 .welcome__buttons {
 		width: 35%;
@@ -583,16 +579,53 @@ img {
 		}
 .welcome__bottom {
 		padding-top: 6rem;
+		display: flex;
+		justify-content: space-between;
+	}
+.welcome__blurb {
+		max-width: 37.5rem;
+		font-size: 1.4rem;
 	}
 .welcome__blurb__image {
-
+			border: 1px solid #2A2B2A;
 		}
 .welcome__blurb__title {
-
+			text-transform: uppercase;
+			font-size: 2rem;
+			font-weight: 700;
+			color: #2A2B2A;
+			margin-top: 3rem;
 		}
 .welcome__blurb__text {
-
+			margin-top: 3rem;
+			line-height: 1.3;
 		}
 .welcome__blurb__link {
-
+			display: inline-block;
+			margin-top: 2rem;
+			text-decoration: none;
+			color: #DCA63B;
+			font-size: 1.4rem;
+			font-weight: 400;
+			text-transform: uppercase;
+			transition: color .2s;
 		}
+.welcome__blurb__link:hover {
+				color: #2A2B2A;
+			}
+.primary-cta {
+	background: url('../../assets/images/bg-1.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+.primary-cta .container {
+		padding: 4rem 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+.primary-cta__text {
+		max-width: 70%;
+		font-size: 5rem;
+		font-style: italic;
+		color: #FFF;
+	}
