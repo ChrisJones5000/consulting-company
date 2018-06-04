@@ -1,0 +1,57 @@
+.post-preview {
+	font-size: 1.4rem;
+	position: relative;
+	padding-bottom: 6rem;
+
+	&::after {
+		@mixin section-divider;
+	}
+
+	&__grid {
+		display: flex;
+		justify-content: space-between;
+
+		&--columns--3 {
+			max-width: 37.5rem;
+		}
+	}
+
+	&__inner {
+
+	}
+
+	&__date-container {
+		color: $color-orange;
+		display: flex;
+		align-items: center;
+	}
+
+	&__icon {
+		font-size: 2.5rem;
+		margin-right: 1rem;
+	}
+
+	&__date {
+		font-size: 2.4rem;
+		font-weight: 300;
+	}
+
+	&__title {
+		font-size: 1.8rem;
+		font-weight: 400;
+		font-style: italic;
+		margin-top: 1rem;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+		margin-top: 3rem;
+	}
+
+	&__read-more {
+		margin-top: 1.5rem;
+		text-transform: uppercase;
+		color: $color-orange;
+	}
+
+}

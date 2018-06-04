@@ -6,9 +6,25 @@
 }
 
 @define-mixin section-title {
-	font-size: 3.5rem;
-	color: $color-darkest;
+	font-size: 3.6rem;
+	font-weight: 600;
+	color: #000;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	margin-bottom: 3rem;
+}
+
+@define-mixin section-container {
+	max-width: 117rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@define-mixin section-divider {
+	content: '';
+	height: 2px;
+	width: 100%;
+	background: url('../../assets/images/bg_hr.png') repeat-x;
+	position: absolute;
+	bottom: 0;
 }

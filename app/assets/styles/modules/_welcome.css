@@ -8,12 +8,7 @@
 		justify-content: space-between;
 
 		&::after {
-			content: '';
-			height: 2px;
-			width: 100%;
-			background: url('../../assets/images/bg_hr.png') repeat-x;
-			position: absolute;
-			bottom: 0;
+			@mixin section-divider;
 		}
 	}
 

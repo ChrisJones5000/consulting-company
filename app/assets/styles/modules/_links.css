@@ -1,0 +1,20 @@
+.link {
+	text-decoration: none;
+	transition: color .2s;
+
+	&--orange {
+		color: $color-orange;
+
+		&:hover {
+			color: $color-darkest;
+		}
+	}
+
+	&--black {
+		color: $color-darkest;
+
+		&:hover {
+			color: $color-orange;
+		}
+	}
+}

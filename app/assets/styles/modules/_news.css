@@ -1,0 +1,11 @@
+.news {
+	background-color: $color-beige;
+
+	&__inner {
+		@mixin section-container;
+	}
+
+	&__title {
+		@mixin section-title;
+	}
+}
