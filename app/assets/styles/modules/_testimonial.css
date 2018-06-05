@@ -1,0 +1,26 @@
+.testimonial {
+	background-color: $color-beige;
+
+	&__inner {
+		@mixin section-container;
+	}
+}
+
+.testimonial-full-width {
+	
+	&__image {
+
+	}
+
+	&__text-container {
+
+	}
+
+	&__text {
+
+	}
+
+	&__details {
+
+	}
+}

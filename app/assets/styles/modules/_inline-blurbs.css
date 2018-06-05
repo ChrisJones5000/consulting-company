@@ -1,11 +1,18 @@
 .inline-blurbs {
-	background-color: $color-beige;
+	background-color: $color-beige;	
+	padding-bottom: 0;
 
 	&__inner {
 		@mixin section-container;
+		padding-bottom: 6rem;
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		flex-flow: wrap;
+
+		&::after {
+			@mixin section-divider;
+		}
 	}
 }
 
