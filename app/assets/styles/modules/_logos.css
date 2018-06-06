@@ -1,0 +1,27 @@
+.logos {
+	background-color: $color-beige;
+
+	&__inner {
+		@mixin section-container;
+	}
+
+	&__row {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 4rem;
+		display: flex;
+		justify-content: space-between;
+
+		&--1 {
+			max-width: 80rem;
+		}
+
+		&--2 {
+			max-width: 46rem;
+		}
+	}
+}
+
+.logo {
+
+}
