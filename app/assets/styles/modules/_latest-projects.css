@@ -1,13 +1,15 @@
 .latest-projects {
 	background-color: $color-beige;
-	position: relative;
-
-	&::after {
-		@mixin section-divider;
-	}
+	padding-bottom: 0;
 
 	&__inner {
+		position: relative;
 		@mixin section-container;
+		padding-bottom: 6rem;
+
+		&::after {
+			@mixin section-divider;
+		}
 	}
 
 	&__title {
