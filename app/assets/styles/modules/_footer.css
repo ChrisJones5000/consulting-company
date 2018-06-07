@@ -1,0 +1,123 @@
+.footer {
+	padding: 0;
+	color: $color-beige;
+	font-size: 1.4rem;
+
+	&__widget {
+		max-width: 30rem;
+		
+		&-title {
+			color: $color-orange;
+			font-size: 2.6rem;
+			font-weight: 400;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__contact {
+
+		&-address {
+			font-style: normal;
+		}
+
+		&-email {
+			margin-top: 1.5rem;
+		}
+	}
+
+	&__pages {
+
+		&-list {
+			list-style: none;
+		}
+
+		&-item {
+			margin-top: 1.5rem;
+
+			&--current a {
+				color: $color-orange;
+			}
+		}
+
+		&-link {
+			color: $color-beige;
+			text-decoration: none;
+		}
+	}
+
+	&__follow {
+
+		&-list {
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&-item {
+			margin-right: 1rem;
+		}
+
+		&-link {
+			color: $color-darker;
+			font-size: 2rem;
+			text-decoration: none;
+			height: 4rem;
+			width: 4rem;
+			background-color: $color-grey-light-1;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: background-color .15s;
+
+			&:hover {
+				background-color: $color-orange;
+				color: $color-grey-light-1;
+			}
+		}
+	}
+
+	&__newsletter {
+
+		&-text {
+
+		}
+
+		&-btn {
+			margin-top: 2rem;
+		}
+	}
+
+	&__copyright {
+		text-transform: uppercase;
+	}
+
+	&__privacy-link {
+		text-transform: none;
+		text-decoration: none;
+	}	
+}
+
+.footer-top {
+	background: url('../../assets/images/bg-footer.jpg') no-repeat center center fixed;
+	background-size: cover;
+
+	&__inner {
+		@mixin section-container;
+		padding: 10rem 0;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.footer-bottom {
+	background-color: $color-beige;
+	color: $color-darkest;
+	
+	&__inner {
+		@mixin section-container;
+		display: flex;
+		align-items: center;
+		min-height: 10rem;
+	}	
+}

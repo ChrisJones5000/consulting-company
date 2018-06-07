@@ -345,6 +345,7 @@ img {
 	letter-spacing: -1px;
 	text-decoration: none;
 	border-radius: 2rem;
+	display: inline-block;
 	transition: all .2s;
 }
 .btn--dark-grey {
@@ -363,6 +364,9 @@ img {
 		}
 .btn--large {
 		padding: 1.5rem 5rem;
+	}
+.btn--medium {
+		padding: 1.2rem 3rem;
 	}
 .site-header {
 	background-color: #404040;
@@ -986,3 +990,100 @@ img {
 .logo {
 
 }
+.footer {
+	padding: 0;
+	color: #F5F6EF;
+	font-size: 1.4rem;	
+}
+.footer__widget {
+		max-width: 30rem;
+	}
+.footer__widget-title {
+			color: #DCA63B;
+			font-size: 2.6rem;
+			font-weight: 400;
+			margin-bottom: 3rem;
+		}
+.footer__contact-address {
+			font-style: normal;
+		}
+.footer__contact-email {
+			margin-top: 1.5rem;
+		}
+.footer__pages-list {
+			list-style: none;
+		}
+.footer__pages-item {
+			margin-top: 1.5rem;
+		}
+.footer__pages-item--current a {
+				color: #DCA63B;
+			}
+.footer__pages-link {
+			color: #F5F6EF;
+			text-decoration: none;
+		}
+.footer__follow-list {
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+		}
+.footer__follow-item {
+			margin-right: 1rem;
+		}
+.footer__follow-link {
+			color: #404040;
+			font-size: 2rem;
+			text-decoration: none;
+			height: 4rem;
+			width: 4rem;
+			background-color: #D5D5D5;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: background-color .15s;
+		}
+.footer__follow-link:hover {
+				background-color: #DCA63B;
+				color: #D5D5D5;
+			}
+.footer__newsletter-text {
+
+		}
+.footer__newsletter-btn {
+			margin-top: 2rem;
+		}
+.footer__copyright {
+		text-transform: uppercase;
+	}
+.footer__privacy-link {
+		text-transform: none;
+		text-decoration: none;
+	}
+.footer-top {
+	background: url('../../assets/images/bg-footer.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+.footer-top__inner {
+		width: 100%;
+		max-width: 117rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10rem 0;
+		display: flex;
+		justify-content: space-between;
+	}
+.footer-bottom {
+	background-color: #F5F6EF;
+	color: #2A2B2A;	
+}
+.footer-bottom__inner {
+		width: 100%;
+		max-width: 117rem;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+		min-height: 10rem;
+	}
