@@ -4,7 +4,13 @@
 	font-size: 1.4rem;
 
 	&__widget {
-		max-width: 30rem;
+		width: 30rem;
+		margin-bottom: 3rem;
+
+		@mixin medium-screen--medium {
+			max-width: 30rem;
+			width: auto;
+		}
 		
 		&-title {
 			color: $color-orange;
@@ -104,9 +110,15 @@
 
 	&__inner {
 		@mixin section-container;
-		padding: 10rem 0;
+		padding-top: 10rem;
+		padding-bottom: 10rem;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		@mixin medium-screen--medium {
+			justify-content: space-around;
+		}
 	}
 }
 

@@ -5,7 +5,14 @@
 		padding-bottom: 6rem;
 		position: relative;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		@mixin small-screen--large {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 
 		&::after {
 			@mixin section-divider;
@@ -13,8 +20,13 @@
 	}
 
 	&__text-content {
-		width: 55%;
-		font-size: 1.4rem;
+		width: 100%;
+		font-size: 1.6rem;
+
+		@mixin small-screen--large {
+			width: 55%;
+			font-size: 1.4rem;
+		}
 
 		&__title {
 			@mixin section-title;
@@ -26,27 +38,51 @@
 	}
 
 	&__buttons {
-		width: 35%;
+		width: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-around;
+		flex-direction: column;
+
+		@mixin small-screen--medium {
+			flex-flow: row wrap;
+		}
+
+		@mixin small-screen--large {
+			width: 35%;
+			justify-content: space-between;
+		}
 
 		.btn {
-			min-width: 45%;
+			min-width: 20rem;
 			text-align: center;
 			margin-top: 4rem;
+
+			@mixin medium-screen--large {
+				min-width: 45%;
+			}
 		}
 	}
 
 	&__bottom {
 		padding-top: 6rem;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		@mixin large-screen--medium {
+			justify-content: space-between;
+		}
 	}
 
 	&__blurb {
 		max-width: 37.5rem;
 		font-size: 1.4rem;
+		margin-top: 3rem;
+
+		@mixin medium-screen--large {
+			margin-top: 0;
+		}
 		
 		&__image {
 			border: 1px solid $color-darkest;

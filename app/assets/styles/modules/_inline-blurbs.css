@@ -7,8 +7,12 @@
 		padding-bottom: 6rem;
 		position: relative;
 		display: flex;
-		justify-content: space-between;
-		flex-flow: wrap;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		@mixin medium-screen--medium {
+			justify-content: space-between;
+		}
 
 		&::after {
 			@mixin section-divider;
@@ -18,10 +22,18 @@
 
 .inline-blurb {
 	font-size: 1.4rem;
-	max-width: 32%;
+	width: 100%;
 	margin-bottom: 3rem;
 	display: flex;
 	align-items: center;
+
+	@mixin small-screen--large {
+		width: 40%;
+	}
+
+	@mixin medium-screen--medium {
+		width: 32%;
+	}
 
 	/*&:last-child {
 		margin-right: 0;

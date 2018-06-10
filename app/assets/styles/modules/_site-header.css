@@ -4,15 +4,25 @@
 	&__menu-container {
 		background-color: $color-darkest;
 		padding: 1.5rem 3rem;
-		text-align: right;
+		text-align: center;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		flex-direction: column;
+
+		@mixin medium-screen--large {
+			text-align: right;
+			flex-direction: row;
+		}
 	}
 
 	&__menu {
 		font-size: 1.6rem;
-		margin-right: 6rem;
+		margin-right: 0;
+
+		@mixin medium-screen--large {
+			margin-right: 6rem;
+		}
 	}
 
 	&__menu-list {
@@ -20,9 +30,16 @@
 	}
 
 	&__menu-item {
-		display: inline-block;
+		margin-top: 1rem;
+		display: block;
+		list-style: none;
 		border-radius: 3rem;
 		transition: background-color .15s ease-in-out, color .25s ease-in-out;
+
+		@mixin medium-screen--large {
+			display: inline-block;
+			margin-top: 0;
+		}
 
 		&--active,
 		&:hover {
@@ -47,12 +64,23 @@
 	&__search-icon {
 		font-size: 2rem;
 		color: $color-beige;
+		margin-top: 2rem;
+		cursor: pointer;
+
+		@mixin medium-screen--large {
+			margin-top: 0;
+		}
 	}
 
 	&__info-bar {
 		padding: 3.5rem 3.5rem;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+		flex-flow: row wrap;
+
+		@mixin small-screen--large {
+			justify-content: space-between;
+		}
 	}
 
 	&__logo {
@@ -62,12 +90,23 @@
 		font-size: 3.6rem;
 		letter-spacing: -1.5px;
 		margin: 0;
+		width: 100%;
+		text-align: center;
+
+		@mixin small-screen--large {
+			width: auto;
+		}
 	}
 
 	&__info-container {
 		display: flex;
 		font-size: 1.2rem;
 		color: $color-grey-light-2;
+		margin-top: 2rem;
+
+		@mixin small-screen--large {
+			margin-top: 0;
+		}
 	}
 
 	&__info-phone {

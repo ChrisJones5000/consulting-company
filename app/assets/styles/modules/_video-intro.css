@@ -2,11 +2,19 @@
 	font-size: 1.4rem;
 	padding-top: 6rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	@mixin medium-screen--medium {
+		justify-content: space-between;
+	}
 
 	&__video-container {
-		max-width: 40%;
-		width: 100%;		
+		width: 100%;
+
+		@mixin medium-screen--medium {
+			width: 40%;
+		}		
 	}
 
 	&__responsive-wrapper {
@@ -25,7 +33,13 @@
 	}
 
 	&__text-container {
-		max-width: 55%;
+		width: 100%;
+		margin-top: 3rem;
+
+		@mixin medium-screen--medium {
+			width: 55%;
+			margin-top: 0;
+		}
 	}
 
 	&__title {

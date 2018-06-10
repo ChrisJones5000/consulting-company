@@ -10,7 +10,12 @@
 		margin-right: auto;
 		margin-bottom: 4rem;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		@mixin small-screen--large {
+			justify-content: space-between;
+		}
 
 		&--1 {
 			max-width: 80rem;
