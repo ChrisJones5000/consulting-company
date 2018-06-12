@@ -1,5 +1,14 @@
 .large-hero {
 	position: relative;
+	margin-top: 12.9rem;
+
+	@mixin small-screen--large {
+		margin-top: 10.9rem;
+	}
+
+	@mixin medium-screen--large {
+		margin-top: 19.3rem;
+	}
 
 	& .container {
 		position: absolute;
