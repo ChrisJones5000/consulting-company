@@ -37,6 +37,36 @@
 			max-width: 32.5rem;
 		}
 
+		&--1 {
+
+			@mixin medium-screen--large {
+				opacity: 0;
+				transform: translateX(-100px);
+				animation: slide-right 1s 1s ease-in-out forwards; 
+
+			}
+		}
+
+		&--2 {
+			
+			@mixin medium-screen--large {
+				opacity: 0;
+				transform: translateX(-100px);
+				animation: slide-right 1s .5s ease-in-out forwards; 
+
+			}
+		}
+
+		&--3 {
+			
+			@mixin medium-screen--large {
+				opacity: 0;
+				transform: translateX(-100px);
+				animation: slide-right 1s ease-in-out forwards; 
+
+			}
+		}
+
 
 		&-icon__container--outer {
 			position: absolute;
