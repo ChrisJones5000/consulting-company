@@ -10449,6 +10449,10 @@ var _RevealOnScroll = __webpack_require__(3);
 
 var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
+var _Slider = __webpack_require__(5);
+
+var _Slider2 = _interopRequireDefault(_Slider);
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -10458,6 +10462,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var mobileMenu = new _MobileMenu2.default();
 new _RevealOnScroll2.default((0, _jquery2.default)('.welcome__buttons'), 'slide-left', '80%');
 new _RevealOnScroll2.default((0, _jquery2.default)('.welcome__blurb, .inline-blurb'), 'reveal-item', '80%');
+// new Slider();
 
 /***/ }),
 /* 2 */
@@ -11334,6 +11339,150 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.Adapter = NoFrameworkAdapter
 }())
 ;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Slider = function () {
+	function Slider() {
+		_classCallCheck(this, Slider);
+
+		this.arrow_prev = (0, _jquery2.default)('.slider__arrow--prev');
+		this.arrow_next = (0, _jquery2.default)('.slider__arrow--next');
+		this.slides = (0, _jquery2.default)('.slider__slide');
+		this.current_slide = (0, _jquery2.default)('.slider__slide--active');
+		this.inactive_slides = (0, _jquery2.default)('.slider__slide--inactive');
+		this.events();
+	}
+
+	_createClass(Slider, [{
+		key: 'events',
+		value: function events() {
+			this.arrow_prev.click(this.moveSlidesBackward.bind(this));
+			this.arrow_next.click(this.moveSlidesForward.bind(this));
+		}
+	}, {
+		key: 'moveSlidesForward',
+		value: function moveSlidesForward() {
+			var $activeSlide;
+			var $nextSlide;
+			var slideIndex = 0;
+			var firstSlide;
+			var prevSlide;
+			var lastSlide;
+
+			this.slides.each(function () {
+				var $currentSlide = (0, _jquery2.default)(this);
+				$nextSlide = $currentSlide.next();
+
+				if ($currentSlide.hasClass('slider__slide--active')) {
+					$activeSlide = $currentSlide;
+				}
+			});
+
+			slideIndex = this.slides.index($activeSlide);
+			$nextSlide = $activeSlide.next();
+			firstSlide = this.slides.first();
+			prevSlide = $activeSlide.prev();
+			lastSlide = this.slides.last();
+
+			if (slideIndex < this.slides.length - 2) {
+				$activeSlide.addClass('slider__slide--inactive-left');
+				$activeSlide.removeClass('slider__slide--active');
+				$nextSlide.addClass('slider__slide--active');
+				$nextSlide.removeClass('slider__slide--inactive-right');
+				lastSlide.addClass('slider__slide--inactive-right');
+				lastSlide.removeClass('slider__slide--inactive-left');
+			} else if (slideIndex === this.slides.length - 2) {
+				$activeSlide.addClass('slider__slide--inactive-left');
+				$activeSlide.removeClass('slider__slide--active');
+				$nextSlide.addClass('slider__slide--active');
+				$nextSlide.removeClass('slider__slide--inactive-right');
+				prevSlide.addClass('slider__slide--inactive-right');
+				prevSlide.removeClass('slider__slide--inactive-left');
+			} else {
+				$activeSlide.addClass('slider__slide--inactive-left');
+				$activeSlide.removeClass('slider__slide--active');
+				prevSlide.addClass('slider__slide--inactive-right');
+				prevSlide.removeClass('slider__slide--inactive-left');
+				firstSlide.addClass('slider__slide--active');
+				firstSlide.removeClass('slider__slide--inactive-right');
+			}
+		}
+	}, {
+		key: 'moveSlidesBackward',
+		value: function moveSlidesBackward() {
+			console.log('start moving slide backward');
+			var $activeSlide;
+			var $nextSlide;
+			var slideIndex = 0;
+			var firstSlide;
+			var prevSlide;
+			var lastSlide;
+
+			this.slides.each(function () {
+				var $currentSlide = (0, _jquery2.default)(this);
+				$nextSlide = $currentSlide.next();
+
+				if ($currentSlide.hasClass('slider__slide--active')) {
+					$activeSlide = $currentSlide;
+				}
+			});
+
+			slideIndex = this.slides.index($activeSlide);
+			$nextSlide = $activeSlide.next();
+			firstSlide = this.slides.first();
+			prevSlide = $activeSlide.prev();
+			lastSlide = this.slides.last();
+
+			if (slideIndex < this.slides.length - 2) {
+				$activeSlide.addClass('slider__slide--inactive-right');
+				$activeSlide.removeClass('slider__slide--active');
+				$nextSlide.addClass('slider__slide--active');
+				$nextSlide.removeClass('slider__slide--inactive-left');
+				lastSlide.addClass('slider__slide--inactive-left');
+				lastSlide.removeClass('slider__slide--inactive-right');
+			} else if (slideIndex === this.slides.length - 2) {
+				$activeSlide.addClass('slider__slide--inactive-right');
+				$activeSlide.removeClass('slider__slide--active');
+				$nextSlide.addClass('slider__slide--active');
+				$nextSlide.removeClass('slider__slide--inactive-left');
+				prevSlide.addClass('slider__slide--inactive-left');
+				prevSlide.removeClass('slider__slide--inactive-right');
+			} else {
+				$activeSlide.addClass('slider__slide--inactive-right');
+				$activeSlide.removeClass('slider__slide--active');
+				prevSlide.addClass('slider__slide--inactive-left');
+				prevSlide.removeClass('slider__slide--inactive-right');
+				firstSlide.addClass('slider__slide--active');
+				firstSlide.removeClass('slider__slide--inactive-left');
+			}
+			console.log('end moving slide backward');
+		}
+	}]);
+
+	return Slider;
+}();
+
+exports.default = Slider;
 
 /***/ })
 /******/ ]);
