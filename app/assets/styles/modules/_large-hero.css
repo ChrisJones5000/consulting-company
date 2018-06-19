@@ -1,7 +1,7 @@
 .large-hero {
 	position: relative;
 	margin-top: 12.9rem;
-	height: 24vw;
+	/*height: 24vw;*/
 
 	@mixin small-screen--large {
 		margin-top: 10.9rem;

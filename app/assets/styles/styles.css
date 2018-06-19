@@ -1,6 +1,8 @@
 @import 'base/_variables';
 @import 'base/_mixins';
 @import 'normalize.css';
+@import 'slick-carousel/slick/slick';
+@import 'slick-carousel/slick/slick-theme';
 @import 'base/_global';
 @import 'modules/_sprite';
 @import 'modules/_containers';
